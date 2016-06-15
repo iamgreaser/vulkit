@@ -38,7 +38,12 @@ Or if you prefer CMake:
 At the time of writing I am still working on step 3.
 
 Note, you will still have to use `vkCreateInstance` yourself, and THIS
-MUST BE THE FIRST THING YOU CALL. Furthermore, you MUST use lazy
+MUST BE THE FIRST THING YOU CALL*. Furthermore, you MUST use lazy
 binding, as the other wrapper functions depend on you calling
 `vkCreateInstance` and stealing the instance handle from that call.
+
+\*: OK, these calls can also be made prior to vkCreateInstance:
+
+* vkEnumerateInstanceLayerProperties
+* vkEnumerateInstanceExtensionProperties
 
