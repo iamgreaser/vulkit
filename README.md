@@ -42,7 +42,8 @@ MUST BE THE FIRST THING YOU CALL*. Furthermore, you MUST use lazy
 binding, as the other wrapper functions depend on you calling
 `vkCreateInstance` and stealing the instance handle from that call.
 
-\*: OK, these calls can also be made prior to vkCreateInstance:
+\*: OK, these calls can be made prior to vkCreateInstance...
+BUT NOTHING ELSE:
 
 * vkEnumerateInstanceLayerProperties
 * vkEnumerateInstanceExtensionProperties
