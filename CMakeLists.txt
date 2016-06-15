@@ -2,7 +2,6 @@ cmake_minimum_required (VERSION 2.6)
 project (vulkit)
 
 find_package (PythonInterp REQUIRED)
-message (${PYTHON_EXECUTABLE})
 
 add_custom_command (
 	OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/vulkan.h ${CMAKE_CURRENT_BINARY_DIR}/vulkit_wrapper.c
