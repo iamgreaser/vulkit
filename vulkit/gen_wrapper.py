@@ -21,15 +21,16 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
+
+import sys
 import xml.etree.ElementTree as ET
 
 def ensure(cond):
 	assert cond
 
+tree = ET.parse(sys.argv[1])
 fp_header = open("vulkan.h", "w")
 fp_source = open("vulkit_wrapper.c", "w")
-
-tree = ET.parse("vk.xml")
 commands = []
 extensions = {}
 cmd_ext_map = {}

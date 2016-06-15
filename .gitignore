@@ -3,6 +3,6 @@
 
 # Results
 libvulkit.so
-vulkit/vulkan.h
-vulkit/vulkit_wrapper.c
+vulkan.h
+vulkit_wrapper.c
 

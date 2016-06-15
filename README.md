@@ -10,12 +10,23 @@ Basically, libepoxy, but for Vulkan.
 ## Installation
 
     ./build.sh
+    su
     ./install.sh
 
 Or if you wish to install it to a different prefix:
 
     ./build.sh
+    su
     PREFIX=/usr ./install.sh
+
+Or if you prefer CMake:
+
+    mkdir obj
+    cd obj
+    cmake ..
+    make
+    su
+    make install
 
 ## Usage
 
