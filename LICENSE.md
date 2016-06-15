@@ -23,7 +23,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ------------------------------------------------------------------------
 
-build.sh and install.sh I release into the public domain.
+build.sh, install.sh, CMakeLists.txt I release into the public domain.
 
 However, if your jurisdiction does not have a public domain, you can use
 this licence instead:
@@ -56,7 +56,7 @@ gen_wrapper.py.
 
 ------------------------------------------------------------------------
 
-vulkit/vk.xml is from here:
+specs/vk.xml is from here:
 https://github.com/KhronosGroup/Vulkan-Docs/blob/1.0-VK_KHR_surface/src/spec/vk.xml
 
 It is licensed like so:
