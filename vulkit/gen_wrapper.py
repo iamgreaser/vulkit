@@ -77,6 +77,22 @@ def gen_command_ifunc(rtype, name, params):
 			params[-1][1], 
 		)
 
+	elif name in ["vkEnumerateInstanceLayerProperties", "vkEnumerateInstanceExtensionProperties"]:
+		s = (
+"""static PFN_%s resolve_%s(void)
+{
+	return (PFN_%s)vkGetInstanceProcAddr(NULL, "%s");
+}
+
+%s vulkit_proto_%s (%s) __attribute__((ifunc ("resolve_%s")));
+""") % (
+			name, name,
+
+			name, name,
+
+			rtype, name, proto, name,
+		)
+
 	else:
 		s = (
 """static PFN_%s resolve_%s(void)
